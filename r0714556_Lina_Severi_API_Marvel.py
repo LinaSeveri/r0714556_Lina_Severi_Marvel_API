@@ -21,17 +21,17 @@ headers = ""
 #With this code, I make the date. And it converts it to dd/mm/yy.
 today = date.today()
 date_1 = today.strftime("%d/%m/%Y")
-##With this code, I make the today's day.
+#With this code, I make the today's day.
 curr_date = date.today()
 #uur + maand
-e = datetime.datetime.now()
+h_m = datetime.datetime.now()
 
 print("=============================================================== ")
-print("The time is now:  %s:%s:%s" % (e.hour, e.minute, e.second))
+print("The time is now:  %s:%s:%s" % (h_m.hour, h_m.minute, h_m.second))
 #With this code, I display the date. And it converts it to dd/mm/yy.
 print("Date:            ", date_1)
 print("Day of the week: ", calendar.day_name[curr_date.weekday()])
-print("Month:           ", e.strftime('%B'))
+print("Month:           ", h_m.strftime('%B'))
 print("===============================================================")
 
 #With this code, I print the name of my app.
