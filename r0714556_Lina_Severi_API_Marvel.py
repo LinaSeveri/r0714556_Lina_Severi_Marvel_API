@@ -2,7 +2,7 @@ import urllib.parse
 import requests
 import hashlib
 
-
+#I import this module to put my data in a table.
 from tabulate import tabulate
 
 import datetime
@@ -16,26 +16,29 @@ timestamp = "1"
 pre_hash = timestamp + private_key + public_key
 result = hashlib.md5(pre_hash.encode())
 
+# This variable I set up to have a title above my table later.
 headers = ""
 
-#With this code, I make the date. And it converts it to dd/mm/yy.
+# With this code, I make the date. And it converts it to dd/mm/yy.
 today = date.today()
 date_1 = today.strftime("%d/%m/%Y")
-#With this code, I make the today's day.
+# With this code, I make the today's day.
 curr_date = date.today()
-#uur + maand
+# With this code, I make the current time and month.
 h_m = datetime.datetime.now()
 
 print("=============================================================== ")
+# With this code, I display the current time.
 print("The time is now:  %s:%s:%s" % (h_m.hour, h_m.minute, h_m.second))
-#With this code, I display the date. And it converts it to dd/mm/yy.
+# With this code, I display the current date. And it converts it to dd/mm/yy.
 print("Date:            ", date_1)
-#With this code, I display the today's day.
+# With this code, I display the today's day.
 print("Day of the week: ", calendar.day_name[curr_date.weekday()])
+# With this code, I display the current month.
 print("Month:           ", h_m.strftime('%B'))
 print("===============================================================")
 
-#With this code, I print the name of my app.
+# With this code, I print the name of my app.
 print("My name is Marvelverse.")
 #This is a small while loop to check the user's input. That they enter a name and not a number.
 while True:
