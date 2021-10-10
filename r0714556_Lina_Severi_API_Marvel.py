@@ -10,8 +10,8 @@ from datetime import date
 import calendar
 
 main_api = "http://gateway.marvel.com/v1/public/characters?"
-public_key = "32a0cf7c4c888e22ac183d71f08ccf00"
-private_key = "48e949913a8b871911b212d6677ccfc57b8fc3d6"
+public_key = "" # Enter your public key here.
+private_key = "" # Enter your private key here.
 timestamp = "1"
 pre_hash = timestamp + private_key + public_key
 result = hashlib.md5(pre_hash.encode())
@@ -67,6 +67,7 @@ while answer != "Y" and answer != "y":
         print("How do I say goodbye? When I hardly had a chance to say hello?  ")
         print("=============================================================== ")
         question = input("Are you sure you don't want to look up a Marvel character? (Type Y/N) ")
+        #When you type "Y" or "y" the program quits.
         if question == "y" or question == "Y":
             # For a more enjoyable user experience, here I am printing a goodbye message.
             print("    __   __   __   __   __       ___ ")
