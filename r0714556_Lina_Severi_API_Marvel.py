@@ -68,6 +68,7 @@ while answer != "Y" and answer != "y":
         print("=============================================================== ")
         question = input("Are you sure you don't want to look up a Marvel character? (Type Y/N) ")
         if question == "y" or question == "Y":
+            # For a more enjoyable user experience, here I am printing a goodbye message.
             print("    __   __   __   __   __       ___ ")
             print("   / _` /  \ /  \ |  \ |__) \ / |__  ")
             print("   \__> \__/ \__/ |__/ |__)  |  |___ ")
@@ -91,6 +92,9 @@ while answer != "Y" and answer != "y":
                         print(name + " doesn't exist \n")
                     else:
                         print("API status: " + str(json_status))
+                        print("---------------------------------------------------------------\n")
+                        print("=============================================================== ")
+                        print("Basic information about " + name )
                         print("===============================================================\n")
                         print("Name: " + name)
                         print("Description: " + str(json_data["data"]["results"][0]["description"]))
@@ -107,10 +111,14 @@ while answer != "Y" and answer != "y":
                     print("Status Code: " + str(
                         json_status) + "; Oops, something went wrong. Did you fill in a superhero name? Remember that you can only fill in a maximum of 100 characters!")
                     print("================================================================\n")
-#This is the code if you choose the "Y" option directly. This is where the code repeats.
+#This is the code if you choose the "Y" or "y" option directly. This is where the code repeats.
 while answer == "Y" or answer == "y" and answer != "N" or answer != "n":
     name = input("Which Marvel character are you looking for ? (type quit to stop) ")
     if name == "quit" or name == "stop" or name == "q" or name == "s" or name == "STOP" or name == "QUIT":
+        # For a more enjoyable user experience, here I am printing a goodbye message.
+        print("    __   __   __   __   __       ___ ")
+        print("   / _` /  \ /  \ |  \ |__) \ / |__  ")
+        print("   \__> \__/ \__/ |__/ |__)  |  |___ ")
         break
     url = main_api + urllib.parse.urlencode({"name": name, "ts": timestamp, "apikey": public_key, "hash": result.hexdigest()})
     print("\n=============================================================== ")
@@ -125,6 +133,9 @@ while answer == "Y" or answer == "y" and answer != "N" or answer != "n":
             print(name + " doesn't exist\n")
         else:
             print("API status: " + str(json_status))
+            print("---------------------------------------------------------------\n")
+            print("=============================================================== ")
+            print("Basic information about " + name)
             print("===============================================================\n")
             print("Name: " + name)
             print("Description: " + str(json_data["data"]["results"][0]["description"]))
