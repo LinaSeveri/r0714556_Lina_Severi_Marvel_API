@@ -18,23 +18,25 @@ result = hashlib.md5(pre_hash.encode())
 
 headers = ""
 
-#datum
+#With this code, I make the date. And it converts it to dd/mm/yy.
 today = date.today()
 date_1 = today.strftime("%d/%m/%Y")
-#dag
+##With this code, I make the today's day.
 curr_date = date.today()
 #uur + maand
 e = datetime.datetime.now()
 
 print("=============================================================== ")
 print("The time is now:  %s:%s:%s" % (e.hour, e.minute, e.second))
+#With this code, I display the date. And it converts it to dd/mm/yy.
 print("Date:            ", date_1)
 print("Day of the week: ", calendar.day_name[curr_date.weekday()])
 print("Month:           ", e.strftime('%B'))
 print("===============================================================")
 
+#With this code, I print the name of my app.
 print("My name is Marvelverse.")
-
+#This is a small while loop to check the user's input. That they enter a name and not a number.
 while True:
     user = input("What is your name? ")
     if user.isalpha():
@@ -53,6 +55,7 @@ print("=============================================================== \n")
 
 answer = ""
 question = ""
+
 while answer != "Y" and answer != "y":
     answer = input("Are you looking for a Marvel character ? (Type Y/N) ")
     if answer == "N" or answer == "n":
