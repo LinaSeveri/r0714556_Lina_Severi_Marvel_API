@@ -30,6 +30,7 @@ print("=============================================================== ")
 print("The time is now:  %s:%s:%s" % (h_m.hour, h_m.minute, h_m.second))
 #With this code, I display the date. And it converts it to dd/mm/yy.
 print("Date:            ", date_1)
+#With this code, I display the today's day.
 print("Day of the week: ", calendar.day_name[curr_date.weekday()])
 print("Month:           ", h_m.strftime('%B'))
 print("===============================================================")
